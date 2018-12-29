@@ -31,8 +31,12 @@ public class UsersResource {
 		Users user = new Users();
 		user.setName("Hai");
 		user.setSalary(1235345534L);
-		
 		usersMapper.insert(user);
+		return usersMapper.findAll();
+	}
+	
+	@GetMapping("update")
+	public List<Users> update() {
 		return usersMapper.findAll();
 	}
 }
